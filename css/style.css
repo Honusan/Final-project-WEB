@@ -399,8 +399,51 @@ header {
         font-size: 18px;
         line-height: 30px;
     }
+    .swiper-slide__text {
+        width: 100%;
+        font-size: 18px;
+        line-height: 32px;
+        color: #2c1500d4;
+    }
       
 }
+@media (max-width:420px) {
+    .swiper-slide__text {
+        padding: 0px 10px;
+        font-size: 16px;
+    }
+    .swiper-next-button__bottom {
+        display: none;
+    }
+    .swiper-prev-button__bottom {
+        display: none;
+    }
+    .swiper-button {
+        width: 50%;
+    }
+    .swiper-prev-button__head {
+       justify-content: center;
+    }
+    .swiper-next-button__head {
+        position: relative;
+        justify-content: center;
+     }
+     .swiper-next-button__arrow {
+        position: absolute;
+        left: 65%;
+        top: 15%;
+        margin: 0px 0px 4px 10px;
+        animation: jumpInfinite_right 1.5s infinite;
+    }  
+    .swiper-prev-button__arrow {
+        position: absolute;
+        right: 60%;
+        top: 15%;
+        margin: 0px 0px 4px 10px;
+        animation: jumpInfinite_right 1.5s infinite;
+    }  
+}
+
 
 @keyframes jumpInfinite_right {
     0% {
