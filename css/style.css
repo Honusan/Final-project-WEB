@@ -201,6 +201,7 @@ header {
 .slide-image {
     width: 600px;
     height: 740px;
+    object-fit: cover;
 }
 
 .swiper-slide__infobtn {
@@ -343,7 +344,6 @@ header {
     .slide-image {
         width: 100%;
         height: 350px;
-        object-fit: cover;
     }
 
     .swiper-slide__buttons {
