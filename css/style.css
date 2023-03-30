@@ -169,7 +169,7 @@ header {
     font-family: "Nunito";
     font-weight: 700;
     line-height: 20px;
-    background-color: #fff;
+    background-color: transparent;
     transition: all 0.5s;
     margin: 0px 10px 0px 0px;
 }
@@ -470,6 +470,57 @@ color: #000000;
 
 /*-------------------------------*/
 
+.description {
+    display: flex;
+    justify-content: space-around;
+}
+.desription__column {
+   
+}
+.decription-first-column-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.description__title {
+    margin: 0px 0px 20px 0px;
+    max-width: 520px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+}
+.description__paragraph {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000d5;
+}
+.description-image-tiny{
+    width: 100%;
+}
+.description-image-large {
+    width: 100%;
+ 
+
+}
+
+.description-image-tiny img {
+    object-fit: cover;
+    max-height: 250px;
+    max-width: 100%;
+}
+.description-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
 @media (max-width:1200px) {
     header {
         padding: 15px 20px;
@@ -521,7 +572,20 @@ color: #000000;
         justify-content:space-around;
         flex-wrap: wrap;
         align-items: center;
-        margin: 0px 0px 80px 0px;
+        margin: 0px 0px 20px 0px;
+    }
+    .description {
+        text-align: center;
+        justify-content: center;
+    }
+    .description__title {
+        font-size: 35px;
+    }
+    .description__text {
+        margin: 0px 0px 15px 0px;
+    }
+    .description-image-large {
+        display: none;
     }
 }
 
@@ -590,6 +654,21 @@ color: #000000;
         font-size: 18px;
         line-height: 32px;
         color: #2c1500d4;
+    
+    }
+    .description__text {
+        margin: 0 auto;
+    }
+
+    .description__title {
+        font-size: 30px;
+        line-height: 40px;
+        max-width: 320px;
+    }
+    .description__paragraph {
+        margin: 0 auto;
+        font-size: 14px;
+        max-width: 300px;
     }
 
 }
