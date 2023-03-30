@@ -98,9 +98,12 @@ html {
 
 /*----------HEADER------------------------*/
 header {
-    background-color: #156963;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     padding: 20px 56px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
 }
 
 .header-container {
@@ -114,18 +117,25 @@ header {
     align-items: center;
 }
 
-.header-container-col__avatar {
+.header-container-col__avatar{
+    width: 36px;
+    height: 36px;
+    background: url('../img/header/ava.svg') 0 0 no-repeat;
+    scale: 1.2;
     transition: all 0.5s;
 }
 
 .header-container-col__avatar:hover {
-    scale: 1.2;
+    scale: 1.4;
     transition: all 0.5s;
     cursor: pointer;
 }
 
 
 .header-container-col__search {
+    width: 20px;
+    height: 20px;
+    background: url('../img/header/search icon.svg') 0 0 no-repeat;
     margin: 0 40px 0 0;
     transition: all 0.5s;
 }
@@ -140,6 +150,9 @@ header {
 .header-container-col__cart {
     margin: 0 40px 0 0;
     transition: all 0.5s;
+    width: 20px;
+    height: 20px;
+    background: url('../img/header/shopping-cart.svg') 0 0 no-repeat;
 }
 
 .header-container-col__cart:hover {
@@ -164,10 +177,13 @@ header {
 }
 
 .btn:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    background-color: #156963;
     cursor: pointer;
     text-decoration: underline;
     transition: all 0.5s;
+}
+.btn:hover a {
+    color: #fff;
 }
 
 .header-container-col__signUp {}
@@ -178,7 +194,9 @@ header {
 
 
 /*--------------------*/
-.main-block {}
+.main-block {
+    margin: 0px 0px 80px 0px;
+}
 
 .main-block__slider {}
 
@@ -200,7 +218,7 @@ header {
 
 .slide-image {
     width: 600px;
-    height: 740px;
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -327,9 +345,57 @@ header {
 
 
 /*--------------------*/
+
+
+.benefits {
+    margin: 0px 0px 80px 0px;
+}
+.benefits__container {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.benefits__item {
+}
+.benefits-item {
+    border: 1px solid #E0E0E0;
+    padding: 20px 15px;
+}
+.benefits-item__head {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 15px 0px;
+}
+.benefits-item__icon {
+    margin: 0px 16px 0px 0px;
+}
+.benefits-item__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #156963;
+}
+.benefits-item__text {
+    width: 230px;
+    font-size: 10px;
+    line-height: 16px;
+    color: #2C1500;
+}
+
+
 @media (max-width:1200px) {
     header {
         padding: 15px 20px;
+    }
+    .header-container-col__avatar{
+        background: url('../img/header/ava\ white.svg') 0 0 no-repeat;
+    }
+    
+    .header-container-col__search {
+        background: url('../img/header/search icon white.svg') 0 0 no-repeat;
+    }
+    .header-container-col__cart {
+        background: url('../img/header/shopping-cart white.svg') 0 0 no-repeat;
     }
     .swiper-slide__container {
         flex-direction: column;
@@ -350,11 +416,17 @@ header {
         justify-content: center;
         align-items: center;
     }
+    .benefits__container {
+        flex-wrap: wrap;
+    }
+    .benefits-item {
+        margin: 0px 0px 20px 0px;
+    }
 }
 
 @media (max-width:600px) {
     header {
-        padding: 15px 0px;
+        padding: 15px 10px;
     }
     .header-container-col__search {
         margin: 0 20px 0 0; 
