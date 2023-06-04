@@ -1,3 +1,5 @@
+console.log(jQuery().jquery);
+
 // Swiper
 new Swiper('.main-block__slider',{
     // Arrows
@@ -12,3 +14,18 @@ new Swiper('.main-block__slider',{
     },
     speed: 1000,
 });
+
+$('#subcriptionForm').on('submit', function (e) {
+    e.preventDefault();
+    var $form = $(this);
+    $.ajax({
+      type: 'POST',
+      url: 'php/subscriptionAjax.php',
+      data: $form.serialize()
+    }).done(function () {
+      $form[0].reset()
+      alert('Thank you for the subscription!')
+    }).fail(function () {
+  alert('Something went wrong')
+    });
+  });
