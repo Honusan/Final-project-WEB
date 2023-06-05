@@ -351,9 +351,9 @@
             </div>
             <div class="footer-column">
                 <div class="footer__subtitle">Berlangganan Email Kami</div>
-                <form id="subcriptionForm" class="email-form">
-                    <input required autocomplete="on" type="text" name="form[]" data-error="Ошибка" placeholder="Name" class="input">
-                    <input required autocomplete="on" type="email" name="form[]" data-error="Ошибка" placeholder="Email" class="input">
+                <form method="POST" id="subcriptionForm" class="email-form">
+                    <input id="emailInput" required  type="text" name="name" placeholder="Name" class="input">
+                    <input id="nameInput" required type="email" name="email" placeholder="Email" class="input">
                     <button type="submit" class="button">Submit</button>
                 </form>
             </div>
@@ -361,7 +361,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
