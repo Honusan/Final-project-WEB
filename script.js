@@ -15,6 +15,12 @@ new Swiper('.main-block__slider',{
     speed: 1000,
 });
 
+
+
+
+
+
+
 // Submit subscription form using Ajax
 $('#subcriptionForm').on('submit', function (e) {
   e.preventDefault();
