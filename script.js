@@ -16,11 +16,6 @@ new Swiper('.main-block__slider',{
 });
 
 
-
-
-
-
-
 // Submit subscription form using Ajax
 $('#subcriptionForm').on('submit', function (e) {
   e.preventDefault();
